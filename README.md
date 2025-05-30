@@ -14,6 +14,9 @@ uv run convert-tif-to-jpg.py
 ```
 
 2. Analyze jpg with microsoft/conditional-detr-resnet-50, to make people crops
+```
+uv run crop-to-people.py 
+```
 
 3. Analyze people crops for faces, and detect who they are
 
