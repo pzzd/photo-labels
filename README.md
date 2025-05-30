@@ -38,8 +38,11 @@ uv venv .env
 source .env/bin/activate
 ```
 
-### PIL
+### Various Python libraries
 
 ```
 uv pip install pillow
+uv pip install transformers
+uv pip install torch
+uv pip install timm
 ```

@@ -1,11 +1,11 @@
 from PIL import Image
-import os
-import shutil
+import os, shutil
 
 Image.MAX_IMAGE_PIXELS = 900000000
 
 output_dir = 'output/jpgs'
-# TODO: save that .gitgnore
+if os.path.exists(output_dir):
+    shutil.rmtree(output_dir)
 os.mkdir(output_dir)
 
 source_dir = 'source'
