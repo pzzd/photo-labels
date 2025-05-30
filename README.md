@@ -45,4 +45,6 @@ uv pip install pillow
 uv pip install transformers
 uv pip install torch
 uv pip install timm
+uv pip install face_recognition
+pip install git+https://github.com/ageitgey/face_recognition_models
 ```

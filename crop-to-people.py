@@ -11,7 +11,6 @@ Image.MAX_IMAGE_PIXELS = 900000000
 
 source_dir = 'source'
 source_list = os.listdir(source_dir)
-print(source_list)
 
 output_dir = 'output/people-crops'
 if os.path.exists(output_dir):
