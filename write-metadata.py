@@ -48,9 +48,12 @@ for file_name in source_list:
         # print ('---')
 
 
+        number_of_people = len(os.listdir("output/people-crops/"+file_name))
+
         # Data to be written
         dictionary = {
             "description": response.message.content,
+            "number_of_people": number_of_people
         }
 
         with open("output/metadata/"+file_name+".json", "w") as outfile:
