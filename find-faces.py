@@ -18,7 +18,7 @@ for file_name in source_list:
 
     file_name_prefix = file_name.split('.')[0]
 
-    for people_file_name in os.listdir('output/people-crops/' + file_name):
+    for index, (people_file_name) in enumerate(os.listdir('output/people-crops/' + file_name)):
 
         path = 'output/people-crops/' + file_name + '/' + people_file_name
 
@@ -41,8 +41,15 @@ for file_name in source_list:
             print(f"  At pixel location Top: {top}, Left: {left}, Bottom: {bottom}, Right: {right}")
 
             # Let's draw a box around the face
-            draw = PIL.ImageDraw.Draw(pil_image)
-            draw.rectangle([left, top, right, bottom], outline="red")
+            # draw = PIL.ImageDraw.Draw(pil_image)
+            # draw.rectangle([left, top, right, bottom], outline="red")
+
+            cropped = pil_image.crop((left, top, right, bottom))
+
+            this_output_dir = output_dir + "/" + file_name
+            if not os.path.exists(this_output_dir):
+                os.mkdir(this_output_dir)
+            cropped.save(f"{this_output_dir}/{index}.jpg", 'JPEG')
 
         # Display the image on screen
-        pil_image.show()
+        # pil_image.show()

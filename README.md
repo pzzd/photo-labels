@@ -19,6 +19,9 @@ uv run crop-to-people.py
 ```
 
 3. Analyze people crops for faces, and detect who they are
+```
+uv run find-faces.py
+```
 
 4. Use llama4 to describe the photo and produce tags
 
